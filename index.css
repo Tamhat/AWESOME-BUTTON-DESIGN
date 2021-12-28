@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(54, 158, 199);
+  height: 80vh;
+  /* color: black; */
+}
+ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 100vh;
+}
+li {
+  list-style: none;
+  margin: 10px;
+  overflow: hidden;
+  height: 20vh;
+}
+li a {
+  position: relative;
+  top: 10px;
+  width: 80px;
+  height: 80px;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  z-index: 11;
+  box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.123);
+  text-decoration: none;
+  /* overflow: hidden; */
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+li a:hover:before {
+  transform: skewX(50deg) translateX(-100px);
+}
+
+button {
+  position: relative;
+  bottom: 380px;
+  color: rgb(250, 250, 246);
+  font-size: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-left: 100px;
+  background-image: linear-gradient(
+    to right,
+    #fc00ff 0%,
+    #00dbde 51%,
+    #fc00ff 100%
+  );
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow:hidden;
+}
+button:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:30px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(220px);
+  transition: 0.5s;
+}
+button:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:30px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(-60px);
+  transition: 0.5s;
+}
+button:hover{
+  background-position: right center;
+  /* background-image: linear-gradient(to right, #ee0979 0%, #ff6a00  51%, #ee0979  100%); */
+  color: #fff;
+  text-decoration: none;
+}
+button:hover:before{
+  transform: skewX(50deg) translateX(-100px);
+}
+button:hover:after{
+  transform: skewX(50deg) translateX(250px);
+}
+/* 
